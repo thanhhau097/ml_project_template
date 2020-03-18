@@ -28,7 +28,7 @@
 - Hyperparameter Optimization: (...)
 
 ### Deployment
-- CI/Testing: Circle CI, Jenkins
+- CI/Testing: Circle CI, Jenkins, linting
 - Web: AWS Lambda Serverless / Docker, Pytorch Serving
 - Interchange: ONNX
 - Monitoring: could be monitored in AWS
