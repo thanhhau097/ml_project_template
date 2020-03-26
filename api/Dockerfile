@@ -15,6 +15,12 @@ COPY api/ ./api
 
 # Install Python dependencies
 RUN set -ex && pip3 install -r api/requirements.txt
+RUN apt update && apt install -y libsm6 libxext6
+RUN apt install libxrender1
+
+# Language
+RUN export LC_ALL=C.UTF-8
+RUN export LANG=C.UTF-8
 
 # Run the web server
 EXPOSE 8000
