@@ -29,6 +29,7 @@
 
 ### Deployment
 - CI/Testing: Circle CI, Jenkins, linting
+  - https://jenkins.io/doc/tutorials/build-a-multibranch-pipeline-project/
 - Web: AWS Lambda Serverless / Docker, Pytorch Serving
 - Interchange: ONNX
 - Monitoring: could be monitored in AWS
