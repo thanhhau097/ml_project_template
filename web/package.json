@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack",
     "start": "webpack-dev-server --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,7 +29,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
