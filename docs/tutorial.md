@@ -13,13 +13,7 @@ sh get-docker.sh
 ```
 
 ### Docker Compose
-`apt install docker-compose`
-
-### Python
-```
-apt install python3.6
-apt install python3-pip
-```
+`apt install -y docker-compose`
 
 ### Clone the repo
 ```
@@ -28,6 +22,7 @@ git clone https://github.com/thanhhau097/ml_project_template.git
 ```
 
 ### Change your custom path
+`cd ml_project_template`
 #### api/app.py
 Change your bucket in AWS S3 (it is optional, when you need to upload user data to s3 bucket)
 ```
@@ -49,7 +44,7 @@ Change your email and domain name (Optional, it is needed when you want your dom
 ### Write your code
 There are 3 tasks that you need to do for your project:
 
-1. Write prediction for you model in `model/predictor.py`
+1. Write prediction for you model in `model/predictor.py` and update your weights in model/weights folder
 2. Write your API in `api/app.py` using Flask framework (you can use the template that was written for image)
 3. Write your web app using ReactJS (you can use the demo template that I wrote in `web/`)
 
