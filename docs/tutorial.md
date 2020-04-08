@@ -36,6 +36,8 @@ async_data = {
 #### nginx/nginx.conf
 Change your domain name (optional, it's useful when you need a domain name instead of public IP address)
 
+Comment out the SSL config in this file if you don't have domain name. (4-6, 29.41)
+
 #### init-letsencrypt.sh
 Note: if you don't have a domain name, please comment the `certbot` service in docker-compose.yml file.
 
