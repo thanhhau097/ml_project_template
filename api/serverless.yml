@@ -1,4 +1,4 @@
-service: <your-name (example: ocr-api-lionel)
+service: ocr-api-lionel
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 

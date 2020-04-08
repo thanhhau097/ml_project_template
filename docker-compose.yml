@@ -1,0 +1,48 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ""
+      dockerfile: api/Dockerfile
+    image: app
+    ports:
+      - 8000:8000
+    links:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+  web:
+    build:
+      context: ""
+      dockerfile: web/Dockerfile
+    ports:
+      - 8080:8080
+    links:
+      - app
+  nginx:
+    container_name: nginx
+    build: ./nginx/
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - app
+      - web
+    links:
+      - app
+      - web
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    links:
+      - nginx
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

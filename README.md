@@ -12,6 +12,9 @@
 
 ![](./readme/ml_deployment_monitor.png)
 
+# Tutorial
+(I will update tutorial video later)
+
 ## Our choices
 ### Data
 - Data Labeling: DataTurks
@@ -54,3 +57,21 @@ apt install python3.6
 apt install python3-pip
 
 ```
+
+### How to run web on local to develop?
+```
+cd web
+npm install 
+npm run build
+npm run start
+```
+
+### Tools use in this template
+1. Flask
+2. Redis
+3. ReactJS
+4. Nginx
+5. Certbot
+6. Celery
+7. Docker
+8. Jenkins (optional)

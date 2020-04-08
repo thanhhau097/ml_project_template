@@ -2,8 +2,8 @@ import React from "react"
 
 
 class App extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
 
         }
@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <p> Hello World </p>
+                <input type='file'/>
             </div>
         )
     }

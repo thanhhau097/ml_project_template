@@ -1,0 +1,15 @@
+flask
+torch
+torchvision
+opencv-python
+numpy
+tqdm
+scikit-image
+boto3
+Pillow
+celery
+redis
+requests
+flask-cors
+pyopenssl
+gunicorn
