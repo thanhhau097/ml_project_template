@@ -1,4 +1,11 @@
+Note: this tutorial is using for using in a AWS ec2 instance (recommended)
+
 # Install 
+```
+sudo -s
+apt update
+```
+
 ### Docker 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -14,14 +21,10 @@ apt install python3.6
 apt install python3-pip
 ```
 
-### NPM modules for Flask app and Web app
+### Clone the repo
 ```
-cd api
-npm install 
-```
-```
-cd web
-npm install 
+apt install git
+git clone https://github.com/thanhhau097/ml_project_template.git 
 ```
 
 ### Change your custom path
@@ -39,6 +42,8 @@ async_data = {
 Change your domain name (optional, it's useful when you need a domain name instead of public IP address)
 
 #### init-letsencrypt.sh
+Note: if you don't have a domain name, please comment the `certbot` service in docker-compose.yml file.
+
 Change your email and domain name (Optional, it is needed when you want your domain can handle HTTPS requests)
 
 ### Write your code
@@ -52,8 +57,7 @@ There are 3 tasks that you need to do for your project:
 You should have an AWS EC2 instance instead of building all the things in local machine, because it require a good network 
 for building docker file
 ```
-sudo -s
-./init-letsencrypt.sh
+./init-letsencrypt.sh # (use when you have a domain name)
 docker-compose build 
 docker-compose up
 ```

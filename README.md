@@ -43,19 +43,8 @@
 - https://fullstackdeeplearning.com/
 - https://github.com/alirezadir/Production-Level-Deep-Learning
 
-# Install
-`apt update`
-- Docker
-```
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
-```
-`apt install docker-compose`
-- Python
-```
-apt install python3.6
-apt install python3-pip
-```
+# Tutorial
+
 
 ### How to run web on local to develop?
 ```
@@ -70,7 +59,7 @@ npm run start
 2. Redis
 3. ReactJS
 4. Nginx
-5. Certbot
+5. Certbot (optional, when you have a domain name)
 6. Celery
 7. Docker
 8. Jenkins (optional)

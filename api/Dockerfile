@@ -9,6 +9,7 @@ FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN apt-get install -y libssl-dev libffi-dev
+RUN apt install -y nodejs npm
 
 # Create the working directory
 RUN set -ex && mkdir /repo
@@ -39,8 +40,8 @@ RUN export AWS_ACCESS_KEY_ID=$(curl http://169.254.169.254/latest/meta-data/iam/
 RUN export AWS_SECRET_ACCESS_KEY=$(curl http://169.254.169.254/latest/meta-data/iam/security-credentials/root | python3 -c "import sys, json; print(json.load(sys.stdin)['SecretAccessKey'])")
 
 # Run the web server
-#WORKDIR /repo/api
-#
+WORKDIR /repo/api
+RUN npm install
 # for nginx
 #ENV LISTEN_PORT 8000
 
