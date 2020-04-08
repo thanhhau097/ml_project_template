@@ -55,7 +55,6 @@ sh get-docker.sh
 ```
 apt install python3.6
 apt install python3-pip
-
 ```
 
 ### How to run web on local to develop?
