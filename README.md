@@ -44,7 +44,8 @@
 - https://github.com/alirezadir/Production-Level-Deep-Learning
 
 # Tutorial
-[Read the tutorial here (AWS EC2 instance is recommended)](./docs/tutorial.md)
+[Read the tutorial for local machine development](./docs/local_tutorial.md)
+[Read the tutorial for cloud (AWS EC2) instance](./docs/tutorial.md)
 
 ### How to run web on local to develop?
 ```
