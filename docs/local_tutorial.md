@@ -82,19 +82,27 @@ python api/app.py
 ```
 
 3. Redis
+
+Change redis conf in /etc/redis/redis.conf 
+```
+bind 0.0.0.0
+```
+
 ```
 systemctl stop redis
 systemctl start redis
 ```
 
 4. Celery
+
 Change 'redis://redis:6379/0' to 'redis://localhost:6379/0' because you are running redis in local machine
 ```
 celery worker -A api.app.celery_app --loglevel=info
 ```
 
 5. Nginx
-Change the app and web to 0.0.0.0
+
+Change the app and web in nginx/nginx.conf file to 0.0.0.0
 ```
 sudo -s
 rm /etc/nginx/sites-enabled/default
