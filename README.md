@@ -117,7 +117,7 @@ systemctl reload nginx
 Now you can go to your browser and see what is happening: [0.0.0.0:8080](0.0.0.0:8080)
 
 
-### Tools use in this template
+### Tools are used in this template
 1. Flask
 2. Redis
 3. ReactJS
