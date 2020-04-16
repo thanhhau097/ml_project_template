@@ -1,5 +1,7 @@
 # ml_project_template
 
+## Tutorial for deployment website in AWS instance [can be found here](./docs/tutorial.md)
+
 # Tutorial
 This is tutorial for local development on local machine
 # Install 
@@ -114,7 +116,7 @@ cp nginx/nginx.conf /etc/nginx/sites-enabled/
 systemctl reload nginx
 ```
 
-Now you can go to your browser and see what is happening: [0.0.0.0:8080](0.0.0.0:8080)
+Now you can go to your browser and see what is happening: [0.0.0.0](0.0.0.0)
 
 
 ### Tools use in this template
