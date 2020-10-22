@@ -15,7 +15,7 @@
     "bootstrap": "^4.4.1",
     "css-loader": "^2.1.1",
     "dotenv": "^8.2.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
